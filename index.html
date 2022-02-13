@@ -4,61 +4,157 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jacob Martin Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/reset.css">
-    <link rel="stylesheet" href="./assets/StyleSheet.css">
+    <link rel="stylesheet" href="./assets/stylesheet.css">
+    <title>Jacob Martin Portfolio</title>
 </head>
 <body>
     <header>
-        <h1>Jacob Martin</h1>
-        <nav>
-          <a href="#aboutme">About Me</a>
-          <a href="#proficiencies">Proficiencies</a>
-          <a href="#projects">Projects</a>
+        <nav class="navbar navbar-expand-lg customNav ">
+            <div class="container-fluid">
+                <h1 class="navbar-brand">Jacob Martin Portfolio</h1>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle customDrop" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Sections
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item customDropItem" href="#aboutme">About Me</a></li>
+                                <li><a class="dropdown-item customDropItem" href="#proficiencies">Proficiencies</a></li>
+                                <li><a class="dropdown-item customDropItem" href="#projects">Projects</a></li>
+                                <li><a class="dropdown-item customDropItem" href="#contactme">Contact Me</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <div id=hero></div>
-    <section id="aboutme">
-        <h2>About Me</h2>
-            <p>I am a lover of animals, nature, video games, and cars! After discovering that I also enjoy the challenge of programming, I signed up for a coding boot camp with the Ohio State University to expedite my education with trial by fire. I look forwards to growing into a highly competent full stack developer and discovering all the wonders I can create with this newfound skill set!</p>
-            <div class="Images">
-                <img src="./assets/KingofWesteros.jpg" alt="A Picture of Me in the Iron Throne" class="personalpicture">
-                <img src="./assets/MeHoldingMaggie.jpg" alt="A Picture of Me Holding My Newborn Niece" class="personalpicture">
-                <img src="./assets/MarTwins.jpg" alt="My Girlfriend holding my niece while I hold my nephew" class="personalpicture">
-                <img src="./assets/EmmaAndI.jpg" alt="Me standing with my Girlfriend" class="personalpicture">
+    <section class="container-fluid d-flex flex-column align-items-center my-5" id="aboutme">
+        <div class="row my-3">
+            <h2 class="col-12 col-md-2">About Me</h2>
+            <p class="col-12 col-md-10 coolerP">I am a lover of animals, nature, video games, and cars! After discovering that I also enjoy the challenge of programming, I signed up for a coding boot camp with the Ohio State University to expedite my education with trial by fire. I look forwards to growing into a highly competent full stack developer and discovering all the wonders I can create with this newfound skill set!</p>
+        </div>
+        <div class="sizeRestrict1 col-12">
+            <div id="carouselExampleIndicators" class="carousel slide border-radius-2" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./assets/KingofWesteros.jpg" class="d-block w-100" alt="A Picture of Me in the Iron Throne">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/MeHoldingMaggie.jpg" class="d-block w-100" alt="A Picture of Me Holding My Newborn Niece">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/MarTwins.jpg" class="d-block w-100" alt="My Girlfriend holding my niece while I hold my nephew">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/EmmaAndI.jpg" class="d-block w-100" alt="Me standing with my Girlfriend">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
+        </div>
     </section>
-    <section id="proficiencies">
-        <div class="label">
-            <h2>
+    <section class="container-fluid my-5" id="proficiencies">
+        <div class="row my-3">
+            <h2 class="col-12 col-md-2">
                 Proficiencies
             </h2>
+            <p class="col-12 col-md-10 coolerP">I have working proficiencies in HTML, CSS. JavaScript, and Bootstrap! My skill grows everyday as I practice and study! Stay tuned to see this list grow!</p>
         </div>
-        <p>I currently have a solid understanding of HTML and a basic understanding of CSS! Soon I'll begin working on JavaScript and see how the magic really happens!</p>
-        <img src="./assets/JCH.png" alt="HTML 5, CSS3, and JavaScript Stock Image" id="Image">
+        <div class="row justify-content-evenly">
+            <img src="./assets/HTML5.png" alt="HTML 5 Stock Image" class="col-12 col-md-3 imageRestrict">
+            <img src="./assets/CSS3.png" alt="CSS3 Stock Image" class="col-12 col-md-3 imageRestrict">
+            <img src="./assets/JavaScript.png" alt="JavaScript Stock Image" class="col-12 col-md-3 imageRestrict">
+            <img src="./assets/Bootstrap.png" alt="Bootstrap Framework Stock Image" class="col-12 col-md-3 imageRestrict">
+        </div>
     </section>
-    <section id="projects">
-        <h2>
-            Projects
-        </h2>
-        <p>
-            Future Projects Here
-        </p>
-        <img src="./assets/IfIHadProject.jpeg" alt="Mr. Turner Meme Altered to Match My Missing Projects as Opposed to His Lack of Trophies" id="Image">
+    <section class="container-fluid my-5" id="projects">
+        <div class="row my-3">
+            <h2 class="col-12 col-md-2">
+                Projects
+            </h2>
+            <p class="col-12 col-md-10 coolerP">Below Is A Preview Of My First Months Work. This section is updated weekly to display my latest accomplishment.</p>
+            <div class="col-12 justify-content-center d-flex">
+                <div class="sizeRestrict2 mt-5">
+                    <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="https://sleepyjake18.github.io/Work-Day-Scheduler/" target="_blank">
+                                <img src="./assets/work-day-scheduler-screenshot.PNG" class="d-block w-100" alt="The home page of my work day schedule app">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="https://sleepyjake18.github.io/SEO-Refactor-HTML-Horizon/" target="_blank"></a>
+                            <img src="./assets/SEO-Rename-Screenshot.png" class="d-block w-100" alt="The link to my SEO HTML Refactor">
+                        </a>
+                    </div>
+                        <div class="carousel-item">
+                            <a href="https://sleepyjake18.github.io/Secure-Password-Generator/" target="_blank"></a>
+                            <img src="./assets/Password-Generator-Screenshot.PNG" class="d-block w-100" alt="The homepage of my password generating app">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="https://sleepyjake18.github.io/Coding-Quiz/" target="_blank"></a>
+                            <img src="./assets/Coding-Quiz.png" class="d-block w-100" alt="The homepage of my coding quiz">
+                        </a>
+                    </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        </div>
     </section>
-
-<footer>
-    <section>
-        <h2>Contact Me!</h2>
-        <p>Please feel free to reach out with any opportunities matching my current skill set. I look forward to working with you, and developing my skill set along the way.
-        </p>
-        <ul>
-            <li>Phone Number: 740-876-2004</li>
-            <li>Email: <a href="mailto: jsmartin01@gmail.com">jsmartin01@gmail.com</a></li>
-            <li>Git Hub: <a href="https://github.com/SleepyJake18/SleepyJake18.github.io" target="_blank">SleepyJake18</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/jacob-martin-779905222/" target="_blank">Jacob Martin</a></li>
-        </ul>
-    </section>
-</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./assets/script.js"></script>
+    <div class="container-fluid">
+        <footer class="d-flex row flex-wrap py-3 my-4 border-top" id="contactme">
+            <h4 class="col-12 col-md-2">Contact Info</h4>
+            <p class="col-12 col-md-10 mb-0 coolerP">Thank you for stopping by! Feel free to contact me with feedback and potential opportunties.</p>
+            
+            <ul class="col-12 d-flex flex-column justify-content-center align-items-center">
+                <li class="contact my-2">Phone Number: <a href="#" class="contactLink">740-876-2004</a> </li>
+                <li class="contact my-2">Email: <a href="mailto: jsmartin01@gmail.com" class="contactLink">jsmartin01@gmail.com</a></li>
+                <li class="contact my-2">Git Hub: <a href="https://github.com/SleepyJake18/SleepyJake18.github.io" target="_blank" class="contactLink">SleepyJake18</a></li>
+                <li class="contact my-2">LinkedIn: <a href="https://www.linkedin.com/in/jacob-martin-779905222/" target="_blank" class="contactLink">Jacob Martin</a></li>
+            </ul>
+        </footer>
+    </div>
 </body>
 </html>

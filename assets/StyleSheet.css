@@ -1,10 +1,9 @@
-/*A list of variables to practice DRY coding*/
-
 :root {
     --black: rgb(18, 18, 19);
     --steelblue: steelblue;
     --white: whitesmoke;
     --gray: gray;
+    --lightgray: lightgray;
     --none: none;
     --flex: flex;
     --centered: center;
@@ -19,96 +18,104 @@
     --30p: 30%;
     --20p: 20%;
 }
-/* Will change the background color of the webpage to black */
+
 body {
-    background-color: var(--black);
+    background-color: var(--lightgray);
 }
-/* Adjusts the styling on the webpage, changing how the elements interact and the background color of the header */
-header {
-    display: var(--flex);
-    background-color: var(--steelblue);
-    flex-flow: var(--cw);
-    position: relative;
-}
-/* On hover, displays the nav bar */
-header:hover nav {
-    display: var(--flex);
-}
-/* Adjusts how h1's are displayed on webpage, as well as font color and font style */
+
 h1 {
-    display: var(--flex);
-    justify-content: var(--centered);
-    color: var(--white);
-    font-size: 100px;
-    margin-bottom: var(--tiny-padding);
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Righteous', cursive;
+    font-size: 75px !important;
 }
-/* Changes how nav elements are displayed, as well as background color and font style */
-nav {
-    display: var(--flex);
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    display: var(--none);
-    background-color: var(--black);
-    font-family:Arial, Helvetica, sans-serif;
+
+h2 {
+    font-family: 'Righteous', cursive;
+    font-size: 50px;
+    border-right: solid var(--black) 5px;
+    border-bottom: solid var(--black) 5px;
+    border-bottom-right-radius: 5px;
 }
-/* Changes how all a tags inside of nav elements appear */
-nav a {
-    text-decoration: var(--none);
-    color: var(--white);
-    font-size: 40px;
+
+h4 {
+    font-family: 'Righteous', cursive;
+    font-size: 50px;
+    border-right: solid var(--black) 5px;
+    border-bottom: solid var(--black) 5px;
+    border-bottom-right-radius: 5px;
 }
-/* Changes how h2 elements display, as well as font size, font color, and font style */
-h2{
-    display: var(--flex);
-    font-size: 60px;
-    margin-bottom: var(--tiny-padding);
-    color: var(--white);
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-/* Changes font styling to p tags and adds margin at bottom */
-p {
-    font-size: 24px;
-    color: var(--white);
-    margin-bottom: var(--tiny-padding);
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
-}
-/* Changes how section tags display as well as background color */
-section {
-    background-color: var(--gray);
-    padding: var(--medium-padding);
-    margin-bottom: var(--medium-padding);
-    display: var(--flex);
-    flex-flow: var(--cw);
-    align-items: var(--centered);
-}
-/* When sections are hovered, changes background color */
-section:hover {
+
+footer {
     background-color: var(--steelblue);
-}
-/* On section hover, displays images */
-section:hover .Images {
-    display: var(--flex);
-}
-/* Makes list items not appear */
-li {
-    display: var(--none);
-}
-/* Changes font styling of all a tags within li */
-li a {
-    text-decoration: var(--none);
-    color: var(--black);
-}
-/* On section hover, displays list items and applies styling */
-section:hover li {
-    display: inline;
-    padding: var(--tiny-padding);
-    font-size: 24px;
     color: var(--white);
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-/* Adds background images and defines space taken up on screen and well as the position of image within defined space */
+
+.contact {
+    font-size: 30px;
+    font-family: 'Righteous', cursive;
+    font-weight: bold; 
+    color: var(--white);
+}
+
+.contactLink {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none; 
+    color: var(--lightgray);
+}
+
+.contactLink:hover {
+    color: var(--white);
+    font-size: 24px;
+    text-shadow: 2px 2px 1px var(--black) ;
+}
+
+.customNav {
+    background-color: var(--steelblue);
+    color: var(--white);
+}
+
+.coolerP {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    border-bottom: solid var(--black) 5px;
+    padding-bottom: 5px;
+}
+
+.customDropItem {
+    font-size: 20px;
+    margin: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.customDrop {
+    font-size: 30px;
+    margin: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-decoration: none; 
+    color: var(--lightgray);
+}
+
+.customDrop:hover {
+    color: var(--white);
+    font-size: 36px;
+    text-shadow: 2px 2px 1px var(--black) ;
+}
+
+
+.sizeRestrict1 {
+    width: 800px;
+}
+
+.sizeRestrict2 {
+    width: 1200px;
+}
+
+.imageRestrict {
+    height: 300px;
+    width: auto;
+}
+
 #hero {
     height: 900px;
     width: 100%;
@@ -117,101 +124,8 @@ section:hover li {
     background-position: 55% 45%;
     margin-bottom: var(--medium-padding);
 }
-/* Makes elements with id #Image not appear on screen and changes space they take up */
-#Image {
-    display: var(--none);
-    height: var(--30p);
-    width: var(--30p);
-}
-/* When section is hovered, displays elements with id=Image */
-section:hover #Image {
-    display: var(--flex);
-}
-/* Changes the space taken up by elements with class=personalpicture */
-.personalpicture {
-    height: var(--20p);
-    width: var(--20p);
-}
-/* Changes how elements with class=Images appear in DOM */
-.Images {
-    justify-content: space-around;
-    display: var(--none);
-}
-/* Applies below changes when screen width reaches 992px or below */
-@media screen and (max-width: 992px) {
-    /* Changes flow of elements with class=Images inside of sections on hover */
-    section:hover .Images {
-        flex-flow: var(--cw);
-        align-items: var(--centered);
-        padding: var(--small-padding);
-    }
-    /* Adjusts space taken by elements with class=personalpicture */
-    .personalpicture {
-        height: var(--50p);
-        width: var(--50p);
-        padding: var(--small-padding);
-    }
-    /* Adjusts space taken by elements with id=Image */
-    #Image {
-        height: var(--50p);
-        width: var(--50p);
-    }
-    /* Adjusts p font size */
-    p {
-        font-size: var(--small-screen-text);
-    }
-    /* On section hover, adjusts how li within are formatted and their font size */
-    section:hover li {
-        display: var(--block);
-        font-size: var(--small-screen-text);
-    }
-    /* Adjusts font size of all a tags within li */
-    li a {
-        font-size: var(--small-screen-text);
-    }
-}
-/* Makes below adjustments when screen width reaches 500px or less */
+
 @media screen and (max-width: 500px) {
-    /* On section hover, elements with class=Images will appear different in DOM */
-    section:hover .Images {
-        flex-flow: var(--cw);
-        align-items: var(--centered);
-        padding: var(--small-padding);
-    }
-    /* Increases the size of elements with class=personalpicture relative to DOM */
-    .personalpicture {
-        height: var(--75p);
-        width: var(--75p);
-        padding: var(--small-padding);
-    }
-    /* Adjusts the size of elements with id=Image relative to DOM */
-    #Image {
-        height: var(--75p);
-        width: var(--75p);
-    }
-    /* Increases font size of p tags */
-    p {
-        font-size: var(--small-screen-text);
-    }
-    /* On section hover. li will adjust how li appear in DOM and font size will change */
-    section:hover li {
-        display: var(--block);
-        font-size: var(--small-screen-text);
-    }
-    /* Adjusts font size of all a tags within li */
-    li a {
-        font-size: var(--small-screen-text);
-    }
-    /* Adds padding to left of h1 elements */
-    h1 {
-        padding-left: 55px;
-    }
-    /* Adjusts how nav elements appear in DOM */
-    nav {
-        flex-flow: var(--cw);
-        align-items: var(--centered);
-    }
-    /* Adjusts height of elements with id=hero */
     #hero {
         height: 450px;
     }

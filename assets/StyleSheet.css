@@ -33,7 +33,6 @@ h2 {
     font-size: 50px;
     border-right: solid var(--black) 5px;
     border-bottom: solid var(--black) 5px;
-    border-bottom-right-radius: 5px;
 }
 
 h4 {
@@ -41,7 +40,6 @@ h4 {
     font-size: 50px;
     border-right: solid var(--black) 5px;
     border-bottom: solid var(--black) 5px;
-    border-bottom-right-radius: 5px;
 }
 
 footer {
@@ -126,7 +124,31 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
+    header {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    h2 {
+        border-right: none;
+    }
+
+    h4 {
+        border-right: none;
+    }
+
     #hero {
         height: 450px;
+    }
+
+    .customDrop {
+        display: flex !important;
+    }
+    
+    .sizeRestrict1 {
+        width: 100%;
+    }
+    .sizeRestrict2 {
+        width: 100%;
     }
 }

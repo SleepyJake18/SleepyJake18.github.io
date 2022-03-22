@@ -25,21 +25,17 @@ body {
 
 h1 {
     font-family: 'Righteous', cursive;
-    font-size: 75px !important;
+    font-size: 50px !important;
 }
 
 h2 {
     font-family: 'Righteous', cursive;
     font-size: 50px;
-    border-right: solid var(--black) 5px;
-    border-bottom: solid var(--black) 5px;
 }
 
 h4 {
     font-family: 'Righteous', cursive;
     font-size: 50px;
-    border-right: solid var(--black) 5px;
-    border-bottom: solid var(--black) 5px;
 }
 
 footer {
@@ -61,6 +57,22 @@ footer {
     color: var(--lightgray);
 }
 
+.customLink {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none; 
+    color: var(--lightgray) !important;
+}
+
+.customLink:hover {
+    color: var(--white) !important;
+    text-shadow: 2px 2px 1px var(--black) ;
+}
+
+.customCard {
+    background-color: var(--steelblue) !important;
+    color: var(--white);
+}
+
 .contactLink:hover {
     color: var(--white);
     font-size: 24px;
@@ -70,6 +82,8 @@ footer {
 .customNav {
     background-color: var(--steelblue);
     color: var(--white);
+    font-family: 'Righteous', cursive;
+    font-size: 50px !important;
 }
 
 .coolerP {
@@ -79,30 +93,10 @@ footer {
     padding-bottom: 5px;
 }
 
-.customDropItem {
-    font-size: 20px;
-    margin: 20px;
-    font-family: 'Roboto', sans-serif;
-}
-
-.customDrop {
-    font-size: 30px;
-    margin: 20px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    text-decoration: none; 
-    color: var(--lightgray);
-}
-
-.customDrop:hover {
-    color: var(--white);
-    font-size: 36px;
-    text-shadow: 2px 2px 1px var(--black) ;
-}
-
-
-.sizeRestrict1 {
-    width: 800px;
+.personalSlideImages {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .sizeRestrict2 {
@@ -112,6 +106,14 @@ footer {
 .imageRestrict {
     height: 300px;
     width: auto;
+}
+
+.center {
+    justify-content: center !important;
+}
+
+.blackText {
+    color: var(--black) !important;
 }
 
 #hero {
@@ -144,7 +146,7 @@ footer {
     .customDrop {
         display: flex !important;
     }
-    
+ 
     .sizeRestrict1 {
         width: 100%;
     }

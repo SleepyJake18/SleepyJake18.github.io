@@ -6,155 +6,195 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/reset.css">
     <link rel="stylesheet" href="./assets/StyleSheet.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.1.0-alpha/dist/css/materialize.min.css">
     <title>Jacob Martin Portfolio</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg customNav ">
-            <div class="container-fluid">
-                <h1>Jacob Martin Portfolio</h1>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class=" navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle customDrop" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Sections
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item customDropItem" href="#aboutme">About Me</a></li>
-                                <li><a class="dropdown-item customDropItem" href="#proficiencies">Proficiencies</a></li>
-                                <li><a class="dropdown-item customDropItem" href="#projects">Projects</a></li>
-                                <li><a class="dropdown-item customDropItem" href="#contactme">Contact Me</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <header class="navbar-fixed">
+        <nav class="customNav">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo center">Jacob Martin Portfolio</a>
+      <ul class="left show-on-large">
+        <li><a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a></li>
+      </ul>
+    </div>
+  </nav>
     </header>
+    <ul id="slide-out" class="sidenav">
+        <li><a class="waves-effect sidenav-close" href="#aboutme"><i class="material-icons">account_circle</i>About Me</a></li>
+        <li><a class="waves-effect sidenav-close" href="#proficiencies"><i class="material-icons">desktop_windows</i>Proficiencies</a></li>
+        <li><a class="waves-effect sidenav-close" href="#projects"><i class="material-icons">code</i>Projects</a></li>
+        <li><a class="waves-effect sidenav-close" href="#contactme"><i class="material-icons">phone_iphone</i>Contact Me</a></li>
+      </ul>
     <div id=hero></div>
-    <section class="container-fluid d-flex flex-column align-items-center my-5" id="aboutme">
-        <div class="row my-3">
-            <h2 class="col-12 col-lg-2">About Me</h2>
-            <p class="col-12 col-lg-10 coolerP">I am a lover of animals, nature, video games, and cars! After discovering that I also enjoy the challenge of programming, I signed up for a coding boot camp with the Ohio State University to expedite my education with trial by fire. I look forwards to growing into a highly competent full stack developer and discovering all the wonders I can create with this newfound skill set!</p>
+    <main class="center">
+
+        <section class="container" id="aboutme">
+            <div class="row">
+                <h2 class="col s12">About Me</h2>
+                <p class="col s12 coolerP">I am a lover of animals, nature, video games, and cars! After discovering that I also enjoy the challenge of programming, I signed up for a coding boot camp with the Ohio State University to expedite my education with trial by fire. I look forwards to growing into a highly competent full stack developer and discovering all the wonders I can create with this newfound skill set!</p>
         </div>
-        <div class="sizeRestrict1 col-12">
-            <div id="carouselExampleIndicators" class="carousel slide border-radius-2" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="./assets/KingofWesteros.jpg" class="d-block w-100" alt="A Picture of Me in the Iron Throne">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./assets/MeHoldingMaggie.jpg" class="d-block w-100" alt="A Picture of Me Holding My Newborn Niece">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./assets/MarTwins.jpg" class="d-block w-100" alt="My Girlfriend holding my niece while I hold my nephew">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./assets/EmmaAndI.jpg" class="d-block w-100" alt="Me standing with my Girlfriend">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
+        <div class="slider col s12">
+            <ul class="slides">
+              <li>
+                <img src="./assets/KingofWesteros.jpg" alt="A Picture of Me in the Iron Throne" class="personalSlideImages">
+            </li>
+              <li>
+                  <img src="./assets/MarTwins.jpg" alt="My Girlfriend holding my niece while I hold my nephew" class="personalSlideImages">
+              </li>
+            </ul>
         </div>
     </section>
-    <section class="container-fluid my-5" id="proficiencies">
-        <div class="row my-3">
-            <h2 class="col-12 col-lg-2">
+    <section class="container" id="proficiencies">
+        <div class="row">
+            <h2 class="col s12">
                 Proficiencies
             </h2>
-            <p class="col-12 col-lg-10 coolerP">I have working proficiencies in HTML, CSS. JavaScript, and Bootstrap! My skill grows everyday as I practice and study! Stay tuned to see this list grow!</p>
-        </div>
-        <div class="row justify-content-evenly">
-            <img src="./assets/HTML5.png" alt="HTML 5 Stock Image" class="col-12 col-lg-3 imageRestrict">
-            <img src="./assets/CSS3.png" alt="CSS3 Stock Image" class="col-12 col-lg-3 imageRestrict">
-            <img src="./assets/JavaScript.png" alt="JavaScript Stock Image" class="col-12 col-lg-3 imageRestrict">
-            <img src="./assets/Bootstrap.png" alt="Bootstrap Framework Stock Image" class="col-12 col-lg-3 imageRestrict">
+            <p class="col s12 coolerP">I have working proficiencies in HTML, CSS, JavaScript, JQuery, and React. I am also trained in Node.js, MySql, and MongoDB. I am trained in the MERN stack, but much prefer Front End technologies.</p>
         </div>
     </section>
-    <section class="container-fluid my-5" id="projects">
-        <div class="row my-3">
-            <h2 class="col-12 col-lg-2">
+    <section class="container" id="projects">
+        <div class="row">
+            <h2 class="col s12">
                 Projects
             </h2>
-            <p class="col-12 col-lg-10 coolerP">Below Is A Preview Of My First Months Work. This section is updated weekly to display my latest accomplishment.</p>
-            <div class="col-12 justify-content-center d-flex">
+            <p class="col s12 coolerP">This section is updated weekly to display my latest accomplishment.</p>
+            <div class="col s12">
                 <div class="sizeRestrict2 mt-5">
-                    <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <a href="https://sleepyjake18.github.io/Work-Day-Scheduler/" target="_blank">
-                                <img src="./assets/work-day-scheduler-screenshot.PNG" class="d-block w-100" alt="The home page of my work day schedule app">
+                    <h4>Featured</h4>
+                    <div class="slider col s12">
+                        <ul class="slides">
+                          <li>
+                            <a href="https://github.com/nathanrusselldev/WARM-Trash-to-Treasure" target="_blank">
+                                <img src="./assets/Trash-to-Treasure.png" alt="The home page of a freecycling app I helped create">
                             </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="https://sleepyjake18.github.io/SEO-Refactor-HTML-Horizon/" target="_blank">
-                            <img src="./assets/SEO-Rename-Screenshot.png" class="d-block w-100" alt="The link to my SEO HTML Refactor">
-                        </a>
-                    </div>
-                        <div class="carousel-item">
-                            <a href="https://sleepyjake18.github.io/Secure-Password-Generator/" target="_blank">
-                            <img src="./assets/Password-Generator-Screenshot.PNG" class="d-block w-100" alt="The homepage of my password generating app">
+                          <li>
+                            <a href="https://github.com/Mohamed7Aden/JAMY-Games" target="_blank">
+                                <img src="./assets/JAMY-Game-Store.png" alt="The home page of a free to play game store I helped create.">
                             </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="https://sleepyjake18.github.io/Coding-Quiz/" target="_blank">
-                            <img src="./assets/Coding-Quiz.png" class="d-block w-100" alt="The homepage of my coding quiz">
-                        </a>
+                          </li>
+                          <li>
+                              <a href="https://github.com/SleepyJake18/Good-ReadMe-Generator" target="_blank">
+                                <img src="./assets/Good-ReadMe-Generator.png" alt="A screenshot of readme generator in action">
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://github.com/SleepyJake18/Real-Time-Weather" target="_blank">
+                                <img src="./assets/Real-Time-Weather.png" alt="A screenshot of readme generator in action">
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
+                    <div class="col s12 m6 l3">
+                      <div class="card">
+                        <div class="card-image">
+                            <img src="assets/work-day-scheduler-screenshot.PNG">
+                          <span class="card-title">Work Day Scheduler</span>
+                        </div>
+                        <div class="card-content customCard">
+                          <p>A simple work day scheduler that utilizes moment.js to allow you to easily tell when you can make plans for.</p>
+                        </div>
+                        <div class="card-action customCard">
+                          <a href="https://github.com/SleepyJake18/Work-Day-Scheduler" class="customLink">Repo</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col s12 m6 l3">
+                      <div class="card">
+                        <div class="card-image">
+                          <img src="assets/Password-Generator-Screenshot.PNG">
+                          <span class="card-title blackText">Password Generator</span>
+                        </div>
+                        <div class="card-content customCard">
+                          <p>This is a simple application that takes in criteria from window prompts and makes a randomized password based on the criteria.</p>
+                        </div>
+                        <div class="card-action customCard">
+                            <a href="https://github.com/SleepyJake18/Secure-Password-Generator" class="customLink">Repo</a>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col s12 m6 l3">
+                      <div class="card">
+                        <div class="card-image">
+                          <img src="assets/Coding-Quiz.png">
+                          <span class="card-title">Coding Quiz</span>
+                        </div>
+                        <div class="card-content customCard">
+                          <p>A simple coding quiz that saves a score to a high score page once completed.</p>
+                        </div>
+                        <div class="card-action customCard">
+                            <a href="https://github.com/SleepyJake18/Coding-Quiz" class="customLink">Repo</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col s12 m6 l3">
+                      <div class="card">
+                        <div class="card-image">
+                          <img src="assets/SEO-Rename-Screenshot.png">
+                          <span class="card-title">SEO Refactor</span>
+                        </div>
+                        <div class="card-content customCard">
+                          <p>This was my first project in the OSU boot camp I attended. All I did was refactor the HTML to be more semantically correct.</p>
+                        </div>
+                        <div class="card-action customCard">
+                            <a href="https://github.com/SleepyJake18/SEO-Refactor-HTML-Horizon" class="customLink">Repo</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col s12 m6 l3">
+                      <div class="card">
+                        <div class="card-image">
+                            <img src="assets/Note-Taker.png">
+                            <span class="card-title blackText">Note Taker</span>
+                        </div>
+                        <div class="card-content customCard">
+                            <p>A simple note taking app utilizing MySql server.</p>
+                        </div>
+                        <div class="card-action customCard">
+                          <a href="https://github.com/SleepyJake18/Note-Taker" class="customLink">Repo</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col s12 m6 l3">
+                      <div class="card">
+                        <div class="card-image">
+                          <img src="assets/Team-Profile-Generator.png">
+                          <span class="card-title">Team Profile Generator</span>
+                        </div>
+                        <div class="card-content customCard">
+                            <p>A simple team profile generator that dynamically creates an HTML page containing cards of the members of your team after collecting the info via Node.js</p>
+                        </div>
+                        <div class="card-action customCard">
+                          <a href="https://github.com/SleepyJake18/Team-Profile-Generator" class="customLink">Repo</a>
+                        </div>
+                      </div>
+                    </div>
+                  
             </div>
         </div>
         </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="./assets/script.js"></script>
-    <div class="container-fluid">
-        <footer class="d-flex row flex-wrap py-3 my-4 border-top" id="contactme">
-            <h4 class="col-12 col-lg-2">Contact Info</h4>
-            <p class="col-12 col-lg-10 mb-0 coolerP">Thank you for stopping by! Feel free to contact me with feedback and potential opportunties.</p>
-            
-            <ul class="col-12 d-flex flex-column justify-content-center align-items-center">
-                <li class="contact my-2">Phone Number: <a href="#" class="contactLink">740-876-2004</a> </li>
-                <li class="contact my-2">Email: <a href="mailto: jsmartin01@gmail.com" class="contactLink">jsmartin01@gmail.com</a></li>
-                <li class="contact my-2">Git Hub: <a href="https://github.com/SleepyJake18/SleepyJake18.github.io" target="_blank" class="contactLink">SleepyJake18</a></li>
-                <li class="contact my-2">LinkedIn: <a href="https://www.linkedin.com/in/jacob-martin-779905222/" target="_blank" class="contactLink">Jacob Martin</a></li>
-            </ul>
-        </footer>
-    </div>
+</main>
+<div>
+    <footer class="center" id="contactme">
+        <h4 class="col s12">Contact Info</h4>
+        <p class="col s12 mb-0 coolerP">Thank you for stopping by! Feel free to contact me with feedback and potential opportunties.</p>
+        
+        <ul class="col s12 d-flex flex-column justify-content-center align-items-center">
+            <li class="contact my-2">Phone Number: <a href="#" class="contactLink">740-876-2004</a> </li>
+            <li class="contact my-2">Email: <a href="mailto: jsmartin01@gmail.com" class="contactLink">jsmartin01@gmail.com</a></li>
+            <li class="contact my-2">Git Hub: <a href="https://github.com/SleepyJake18/SleepyJake18.github.io" target="_blank" class="contactLink">SleepyJake18</a></li>
+            <li class="contact my-2">LinkedIn: <a href="https://www.linkedin.com/in/jacob-martin-779905222/" target="_blank" class="contactLink">Jacob Martin</a></li>
+        </ul>
+    </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.1.0-alpha/dist/js/materialize.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="./assets/script.js"></script>
 </body>
 </html>

@@ -1,10 +1,12 @@
-var customDrop = document.querySelector('.customDrop');
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, {
+    });
+  });
 
-function transformText (event) {
-    event.currentTarget.setAttribute (
-        "style",
-        "font-size: 36px; text-shadow: 2px 2px 1px var(--black) ; color: var(--white);"
-    );
-}
-
-customDrop.addEventListener("click", transformText);
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(elems, {
+      'height' : 950, 'indicators' : true
+    });
+  });
